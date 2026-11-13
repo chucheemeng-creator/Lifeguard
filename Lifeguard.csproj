@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<!-- 基礎設定 -->
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -24,17 +24,6 @@
 		<EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <Compile Remove="archive\**" />
-	  <EmbeddedResource Remove="archive\**" />
-	  <None Remove="archive\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove=".env" />
-	  <None Remove="backup.bat" />
-	</ItemGroup>
-
   <ItemGroup>
     <Content Include="Lifeguard.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -50,6 +39,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update=".env">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -40,6 +40,8 @@ jobs:
           Copy-Item publish\Lifeguard.exe $stage
           $example = Get-ChildItem -Recurse -Filter config.example.json | Select-Object -First 1
           if ($example) { Copy-Item $example.FullName $stage }
+          $envExample = Get-ChildItem -Recurse -Force -Filter .env.example | Select-Object -First 1
+          if ($envExample) { Copy-Item $envExample.FullName $stage }
           foreach ($dir in 'tools', 'mq4') {
             $d = Get-ChildItem -Recurse -Directory -Filter $dir | Where-Object { $_.FullName -notmatch '\\(bin|obj|publish|stage)\\' } | Select-Object -First 1
             if ($d) { Copy-Item $d.FullName "$stage\$dir" -Recurse }

@@ -31,11 +31,7 @@ Lifeguard 是 MetaTrader 4 (MT4) 與 HaNodeClient 的看門狗。它在 Windows 
 
 1. 從 [Releases](../../releases) 下載 zip,解壓到一個資料夾,例如 `C:\MT4\Lifeguard`。
 2. 把 `config.example.json` 複製成 `config.json`,填入每個 MT4 的 `ExePath` 與 `LogDirectory`。
-3. 在同一個資料夾建立 `.env`,放 Telegram 設定(沒有也能執行,只是不會發通知):
-   ```
-   TelegramBotToken=你的 Bot Token
-   TelegramChatId=你的 Chat ID
-   ```
+3. 把 `.env.example` 複製成 `.env`,填入 Telegram 的 Bot Token 與 Chat ID(取得方式寫在檔案裡)。沒有 `.env` 也能執行,只是不會發通知。
 4. 把 `mq4\Heartbeat2.mq4` 複製到 MT4 的 `MQL4\Experts`,編譯後掛到任一張圖表。EA 的 `InstanceID` 必須與 `config.json` 裡的實例名稱(例如 `MT4_01`)**完全相同**。
 5. 執行 `Lifeguard.exe`。log 出現 `Monitoring activated` 就代表開始監控。
 6. (建議)用系統管理員 PowerShell 執行 `tools\Install-LifeguardTask.ps1 -ExePath "C:\MT4\Lifeguard\Lifeguard.exe"`,建立工作排程:每 5 分鐘檢查一次,Lifeguard 沒在執行就啟動。
@@ -112,11 +108,7 @@ Lifeguard is a watchdog for MetaTrader 4 (MT4) and HaNodeClient. It runs on Wind
 
 1. Download the zip from [Releases](../../releases) and extract it to a folder such as `C:\MT4\Lifeguard`.
 2. Copy `config.example.json` to `config.json` and set `ExePath` and `LogDirectory` for each MT4.
-3. Create `.env` in the same folder with your Telegram settings (optional; without it Lifeguard runs but sends no alerts):
-   ```
-   TelegramBotToken=your bot token
-   TelegramChatId=your chat ID
-   ```
+3. Copy `.env.example` to `.env` and fill in your Telegram bot token and chat ID (the file explains how to get them). Without `.env` Lifeguard still runs but sends no alerts.
 4. Copy `mq4\Heartbeat2.mq4` to the MT4 `MQL4\Experts` folder, compile it and attach it to any chart. The EA's `InstanceID` must match the instance name in `config.json` (for example `MT4_01`) **exactly**.
 5. Run `Lifeguard.exe`. Monitoring has started when the log shows `Monitoring activated`.
 6. (Recommended) In an elevated PowerShell, run `tools\Install-LifeguardTask.ps1 -ExePath "C:\MT4\Lifeguard\Lifeguard.exe"`. It creates a scheduled task that checks every 5 minutes and starts Lifeguard if it is not running.

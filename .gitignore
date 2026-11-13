@@ -1,6 +1,6 @@
 # 機密與本機設定:絕不提交
-.env
-config.json
+/.env
+/config.json
 
 # Visual Studio / 編譯產物
 .vs/
@@ -18,4 +18,3 @@ Logs/
 # 個人備份工具
 archive/
 backup.bat
-/config.json
