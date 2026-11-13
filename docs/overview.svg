@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860" font-family="Noto Sans CJK TC, Microsoft JhengHei, PingFang TC, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs><marker id="ah" markerWidth="5" markerHeight="5" viewBox="0 0 10 10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f2a44"/></marker></defs>
+<rect width="1280" height="860" fill="#f8fafc"/>
+<svg x="40" y="28" width="72" height="72" viewBox="0 0 256 256"><defs><mask id="m112104"><rect width="256" height="256" fill="#fff"/><circle cx="112" cy="112" r="48" fill="#000"/></mask></defs><g mask="url(#m112104)"><circle cx="112" cy="112" r="104" fill="#fff"/><path d="M112 112 L72.2 15.9 A104 104 0 0 1 151.8 15.9 Z" fill="#e53935"/><path d="M112 112 L208.1 72.2 A104 104 0 0 1 208.1 151.8 Z" fill="#e53935"/><path d="M112 112 L151.8 208.1 A104 104 0 0 1 72.2 208.1 Z" fill="#e53935"/><path d="M112 112 L15.9 151.8 A104 104 0 0 1 15.9 72.2 Z" fill="#e53935"/><circle cx="112" cy="112" r="101.0" fill="none" stroke="#7f1d1d" stroke-width="6"/></g><circle cx="112" cy="112" r="48" fill="none" stroke="#7f1d1d" stroke-width="6"/><circle cx="196" cy="196" r="54" fill="#16a34a" stroke="#ffffff" stroke-width="8"/><polyline points="160,198 178,198 186,178 198,218 210,170 218,198 232,198" fill="none" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/></svg>
+<text x="128" y="62" font-size="36" fill="#0f2a44" font-weight="700" text-anchor="start">Lifeguard</text>
+<text x="128" y="92" font-size="18" fill="#475569" font-weight="400" text-anchor="start">MT4 與 HaNodeClient 的看門狗:卡住或當掉時自動重啟,並用 Telegram 通知你</text>
+<rect x="40" y="130" width="360" height="44" rx="10" fill="#0f2a44"/>
+<text x="220.0" y="159" font-size="20" fill="#fff" font-weight="700" text-anchor="middle">① 監控對象</text>
+<rect x="460" y="130" width="360" height="44" rx="10" fill="#0f2a44"/>
+<text x="640.0" y="159" font-size="20" fill="#fff" font-weight="700" text-anchor="middle">② 偵測問題</text>
+<rect x="880" y="130" width="360" height="44" rx="10" fill="#0f2a44"/>
+<text x="1060.0" y="159" font-size="20" fill="#fff" font-weight="700" text-anchor="middle">③ 自動處理</text>
+<rect x="40" y="310" width="360" height="210" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="60" y="344" font-size="20" fill="#0f2a44" font-weight="700" text-anchor="start">MT4 終端機(可多個)</text>
+<rect x="60" y="360" width="320" height="62" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="76" y="386" font-size="17" fill="#0f2a44" font-weight="700" text-anchor="start">Heartbeat2 EA</text>
+<text x="76" y="410" font-size="15" fill="#475569" font-weight="400" text-anchor="start">掛在圖表上,定時送出心跳訊號</text>
+<rect x="60" y="436" width="320" height="62" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+<text x="76" y="462" font-size="17" fill="#0f2a44" font-weight="700" text-anchor="start">MQL4\Logs 日誌</text>
+<text x="76" y="486" font-size="15" fill="#475569" font-weight="400" text-anchor="start">EA 載入失敗等錯誤會寫在這裡</text>
+<rect x="40" y="190" width="360" height="110" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="60" y="224" font-size="20" fill="#0f2a44" font-weight="700" text-anchor="start">HaNodeClient(可選)</text>
+<rect x="60" y="238" width="320" height="46" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="76" y="267" font-size="15" fill="#475569" font-weight="400" text-anchor="start">定時送出心跳訊號</text>
+<rect x="460" y="190" width="360" height="210" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="224" font-size="20" fill="#0f2a44" font-weight="700" text-anchor="start">心跳逾時</text>
+<text x="800" y="224" font-size="14" fill="#475569" font-weight="400" text-anchor="end">MT4 預設 10 秒</text>
+<text x="480" y="254" font-size="15" fill="#475569" font-weight="400" text-anchor="start">沒收到心跳,就檢查程序狀態:</text>
+<rect x="480" y="270" width="320" height="34" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="494" y="293" font-size="16" fill="#0f2a44" font-weight="700" text-anchor="start">程序不見了</text>
+<text x="786" y="293" font-size="14" fill="#475569" font-weight="400" text-anchor="end">當掉或被關閉</text>
+<rect x="480" y="312" width="320" height="34" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="494" y="335" font-size="16" fill="#0f2a44" font-weight="700" text-anchor="start">沒有回應</text>
+<text x="786" y="335" font-size="14" fill="#475569" font-weight="400" text-anchor="end">視窗卡死</text>
+<rect x="480" y="354" width="320" height="34" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="494" y="377" font-size="16" fill="#0f2a44" font-weight="700" text-anchor="start">有回應但沒心跳</text>
+<text x="786" y="377" font-size="14" fill="#475569" font-weight="400" text-anchor="end">EA 停擺</text>
+<rect x="460" y="420" width="360" height="110" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="454" font-size="20" fill="#0f2a44" font-weight="700" text-anchor="start">日誌出現致命訊息</text>
+<text x="480" y="482" font-size="15" fill="#475569" font-weight="400" text-anchor="start">例如 Initialization failed、</text>
+<text x="480" y="506" font-size="15" fill="#475569" font-weight="400" text-anchor="start">requires active MQL5 account</text>
+<rect x="880" y="190" width="360" height="340" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="912" cy="230" r="15" fill="#e53935"/>
+<text x="912" y="236" font-size="16" fill="#fff" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="228" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">結束舊程序</text>
+<text x="940" y="252" font-size="15" fill="#475569" font-weight="400" text-anchor="start">確認真的退出;失敗會再試一次</text>
+<line x1="912" y1="248" x2="912" y2="290" stroke="#cbd5e1" stroke-width="3"/>
+<circle cx="912" cy="308" r="15" fill="#e53935"/>
+<text x="912" y="314" font-size="16" fill="#fff" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="306" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">關閉 AutoTrade(可選)</text>
+<text x="940" y="330" font-size="15" fill="#475569" font-weight="400" text-anchor="start">MT4 重啟後不會自行下單</text>
+<line x1="912" y1="326" x2="912" y2="368" stroke="#cbd5e1" stroke-width="3"/>
+<circle cx="912" cy="386" r="15" fill="#16a34a"/>
+<text x="912" y="392" font-size="16" fill="#fff" font-weight="700" text-anchor="middle">3</text>
+<text x="940" y="384" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">重新啟動程式</text>
+<text x="940" y="408" font-size="15" fill="#475569" font-weight="400" text-anchor="start">啟動後給 30 秒載入時間</text>
+<line x1="912" y1="404" x2="912" y2="446" stroke="#cbd5e1" stroke-width="3"/>
+<circle cx="912" cy="464" r="15" fill="#16a34a"/>
+<text x="912" y="470" font-size="16" fill="#fff" font-weight="700" text-anchor="middle">4</text>
+<text x="940" y="462" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">Telegram 通知</text>
+<text x="940" y="486" font-size="15" fill="#475569" font-weight="400" text-anchor="start">告警、每小時提醒、恢復通知</text>
+<line x1="402" y1="245" x2="456" y2="245" stroke="#0f2a44" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="402" y1="391" x2="456" y2="340" stroke="#0f2a44" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="402" y1="475" x2="456" y2="475" stroke="#0f2a44" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="822" y1="295" x2="876" y2="330" stroke="#0f2a44" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="822" y1="475" x2="876" y2="390" stroke="#0f2a44" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M1060 532 V568 H220 V536" fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="8 6"/>
+<path d="M212 546 L220 532 L228 546 Z" fill="#16a34a"/>
+<rect x="530" y="552" width="220" height="32" rx="16" fill="#f8fafc"/>
+<text x="640" y="574" font-size="16" fill="#16a34a" font-weight="700" text-anchor="middle">重啟後繼續監控</text>
+<text x="40" y="628" font-size="22" fill="#0f2a44" font-weight="700" text-anchor="start">保護機制:不會無止境地重啟</text>
+<rect x="40" y="648" width="285" height="130" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="40" y="648" width="8" height="130" rx="4" fill="#e53935"/>
+<text x="64" y="684" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">重啟也救不回來</text>
+<text x="64" y="716" font-size="15" fill="#475569" font-weight="400" text-anchor="start">連續重啟 3 次仍沒有心跳,</text>
+<text x="64" y="742" font-size="15" fill="#475569" font-weight="400" text-anchor="start">就停止重啟並發出緊急告警。</text>
+<rect x="345" y="648" width="285" height="130" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="345" y="648" width="8" height="130" rx="4" fill="#e53935"/>
+<text x="369" y="684" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">反覆崩潰(Crash Loop)</text>
+<text x="369" y="716" font-size="15" fill="#475569" font-weight="400" text-anchor="start">30 分鐘內重啟達 5 次,</text>
+<text x="369" y="742" font-size="15" fill="#475569" font-weight="400" text-anchor="start">暫停自動重啟,通知你上去檢查。</text>
+<rect x="650" y="648" width="285" height="130" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="650" y="648" width="8" height="130" rx="4" fill="#16a34a"/>
+<text x="674" y="684" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">停擺期間持續提醒</text>
+<text x="674" y="716" font-size="15" fill="#475569" font-weight="400" text-anchor="start">每小時提醒一次,</text>
+<text x="674" y="742" font-size="15" fill="#475569" font-weight="400" text-anchor="start">心跳恢復後會通知已恢復。</text>
+<rect x="955" y="648" width="285" height="130" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="955" y="648" width="8" height="130" rx="4" fill="#16a34a"/>
+<text x="979" y="684" font-size="18" fill="#0f2a44" font-weight="700" text-anchor="start">設定即時生效</text>
+<text x="979" y="716" font-size="15" fill="#475569" font-weight="400" text-anchor="start">修改 config.json 後自動重新載入,</text>
+<text x="979" y="742" font-size="15" fill="#475569" font-weight="400" text-anchor="start">不必重開 Lifeguard。</text>
+<text x="40" y="822" font-size="15" fill="#475569" font-weight="400" text-anchor="start">以上的秒數與次數都是預設值,可以在 config.json 調整。Telegram 的 Token 放在 .env。</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo3MWRmMjdjOC0yZTNlLTQ5MGItODkzYy04MWExM2I0YTlmYWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNO1wD30zCwsjX3Vw9zN19MAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3NWEwYTZlNy02NzVjLTRiMGItYjJmOS1mMzk0NzQ4NGU1YzZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqvaKpNFnbLfyZdmQ6bd5XQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg3GrK2CU7x89Lo3mVGcLab+IiIQ+CKguaXzn7Fh2qGy+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaH7QccIAwBSaITpTkMkxu3cAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICVWilGx964dI5WqV7dO5XRSLVZyLNlXDqZMN0RG1gUiZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSqYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjcxZGYyN2M4LTJlM2UtNDkwYi04OTNjLTgxYTEzYjRhOWZhYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE0NmEyZjY0LTBkMzctNDMwOC05OTgyLWVmOGZiYzMxNTMxZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDcasrYJTvHz0ujeZUZwtpv4iIhD4IqC5pfOfsWHaobL6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggHDrTBRkUvGN4hNZ/HxM1nhfH1XKtY4aE4xJG6PwUqMSiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggg/+BDObXsPISvAhD7V7+eq2xfkTl7S1mxSAUeNg3b2x0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDMHtdn4v1Rcl+k8b6Cz0WnvOs42nqJQ23185clz/opRNhzUAx5R2ITJ3P61+MkD4UUWj1zi00nV9WxP8SgmviU=</c2pa:manifest></metadata></svg>

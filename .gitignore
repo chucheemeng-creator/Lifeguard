@@ -1,0 +1,20 @@
+# 機密與本機設定:絕不提交
+.env
+config.json
+
+# Visual Studio / 編譯產物
+.vs/
+bin/
+obj/
+*.user
+*.suo
+publish/
+
+# 執行時產生
+Logs/
+*.log
+/config.json
+
+# 個人備份工具
+archive/
+backup.bat

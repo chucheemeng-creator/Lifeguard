@@ -1,0 +1,23 @@
+{
+  "NodeId": "WinNode-A",
+  "TimeoutMilliseconds": 10000,
+  "InitialDelayMs": 30000,
+  "MaxRetries": 3,
+  "RestartCooldownMs": 15000,
+  "RestartStartupGraceMs": 30000,
+  "AlertReminderIntervalMs": 3600000,
+  "MT4Instances": {
+    "MT4_01": {
+      "ExePath": "D:\\MT4\\MT4_01\\terminal.exe",
+      "LogDirectory": "D:\\MT4\\MT4_01\\MQL4\\Logs"
+    },
+    "MT4_02": {
+      "ExePath": "D:\\MT4\\MT4_02\\terminal.exe",
+      "LogDirectory": "D:\\MT4\\MT4_02\\MQL4\\Logs"
+    }
+  },
+  "HaNodeClient": {
+    "ExePath": "D:\\HaNodeClient\\HaNodeClient.exe",
+    "HeartbeatTimeoutMs": 30000
+  }
+}
