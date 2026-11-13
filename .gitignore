@@ -18,3 +18,4 @@ Logs/
 # 個人備份工具
 archive/
 backup.bat
+/config.json
