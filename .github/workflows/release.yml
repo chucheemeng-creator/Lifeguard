@@ -1,0 +1,61 @@
+# 推送 v 開頭的 tag(例如 v1.0.0)時:在 Windows 上做 AOT 編譯,
+# 把 Lifeguard.exe 與範例設定、工具打包成 zip,附到同名的 GitHub Release。
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+  workflow_dispatch:        # 也可以在 Actions 頁面手動執行(只編譯,不建立 Release)
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Publish (Native AOT)
+        shell: pwsh
+        run: |
+          $proj = Get-ChildItem -Recurse -Filter Lifeguard.csproj | Select-Object -First 1
+          if ($null -eq $proj) { throw "Lifeguard.csproj not found" }
+          # 用 tag 當版本號(v1.2.3 → 1.2.3),覆蓋 csproj 的 <Version>,確保 exe 與 Release 版本一致
+          $verArgs = @()
+          if ($env:GITHUB_REF_TYPE -eq 'tag') { $verArgs = @("-p:Version=$($env:GITHUB_REF_NAME.TrimStart('v'))") }
+          dotnet publish $proj.FullName -c Release -r win-x64 -o "$env:GITHUB_WORKSPACE\publish" @verArgs
+
+      - name: Package
+        shell: pwsh
+        run: |
+          $name = if ($env:GITHUB_REF_TYPE -eq 'tag') { "Lifeguard-$env:GITHUB_REF_NAME" } else { "Lifeguard-dev" }
+          $stage = "$env:GITHUB_WORKSPACE\stage\$name"
+          New-Item -ItemType Directory -Force $stage | Out-Null
+
+          Copy-Item publish\Lifeguard.exe $stage
+          $example = Get-ChildItem -Recurse -Filter config.example.json | Select-Object -First 1
+          if ($example) { Copy-Item $example.FullName $stage }
+          foreach ($dir in 'tools', 'mq4') {
+            $d = Get-ChildItem -Recurse -Directory -Filter $dir | Where-Object { $_.FullName -notmatch '\\(bin|obj|publish|stage)\\' } | Select-Object -First 1
+            if ($d) { Copy-Item $d.FullName "$stage\$dir" -Recurse }
+          }
+
+          Compress-Archive -Path "$stage\*" -DestinationPath "$env:GITHUB_WORKSPACE\$name.zip"
+          "ZIP=$name.zip" >> $env:GITHUB_ENV
+
+      - uses: actions/upload-artifact@v6
+        with:
+          name: ${{ env.ZIP }}
+          path: ${{ env.ZIP }}
+
+      - name: Create GitHub Release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP }}
+          generate_release_notes: true
