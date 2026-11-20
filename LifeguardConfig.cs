@@ -45,8 +45,10 @@ public class Config
     public int RestartFlapMaxCount { get; set; } = DefaultRestartFlapMaxCount;       // 視窗內成功重啟達此次數 → 暫停自動重啟
     public int AlertReminderIntervalMs { get; set; } = DefaultAlertReminderIntervalMs;
 
-    // 啟動 MT4 前把 config\experts.ini 的 AutoTrade 改成關閉(HA 節點用;由 HaNodeClient 決定何時打開)
-    public bool ForceAutoTradeOffOnStart { get; set; } = false;
+    // 啟動 MT4 前把 config\experts.ini 的 AutoTrade 改成關閉(HA 節點用;由 HaNodeClient 決定何時打開)。
+    // 未設定(null)時:有設定 HaNodeClient.ExePath 的 HA 節點預設開啟,避免 Slave 重啟後在 HaNodeClient
+    // 關掉 AutoTrade 之前短暫雙邊下單;非 HA 節點預設關閉。明確填 true / false 則照填的值。
+    public bool? ForceAutoTradeOffOnStart { get; set; }
 
     // Dead / Flapping 之後恢復(心跳回來)時發 Telegram 通知
     public bool NotifyOnRecovery { get; set; } = true;
@@ -62,4 +64,8 @@ public class Config
     public int EffectiveRestartFlapWindowMs => RestartFlapWindowMs > 0 ? RestartFlapWindowMs : DefaultRestartFlapWindowMs;
     public int EffectiveRestartFlapMaxCount => RestartFlapMaxCount > 0 ? RestartFlapMaxCount : DefaultRestartFlapMaxCount;
     public int EffectiveAlertReminderIntervalMs => AlertReminderIntervalMs > 0 ? AlertReminderIntervalMs : DefaultAlertReminderIntervalMs;
+    public bool EffectiveForceAutoTradeOffOnStart => ForceAutoTradeOffOnStart ?? IsHaNode;
+
+    /// <summary>有設定 HaNodeClient.ExePath 就視為 HA 節點(交易開關由 HaNodeClient 決定)</summary>
+    public bool IsHaNode => !string.IsNullOrWhiteSpace(HaNodeClient?.ExePath);
 }

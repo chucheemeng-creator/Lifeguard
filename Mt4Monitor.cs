@@ -193,7 +193,7 @@ public sealed class Mt4Monitor(
                     // 清除重啟流程期間可能殘留的舊 heartbeat / fatal 訊號。
                     // 時機必須在「舊程序已死、新程序尚未啟動」之間，
                     // 避免在新程序啟動後 Reset 而吃掉新的 heartbeat / fatal。
-                    bool forceAutoTradeOff = currentConfig.ForceAutoTradeOffOnStart;
+                    bool forceAutoTradeOff = currentConfig.EffectiveForceAutoTradeOffOnStart;
 
                     var result = await processes.RestartAsync(
                         instanceId, exePath, "/portable", token,
