@@ -6,6 +6,7 @@
   "RestartCooldownMs": 15000,
   "RestartStartupGraceMs": 30000,
   "AlertReminderIntervalMs": 3600000,
+  "ForceAutoTradeOffOnStart": true,
   "MT4Instances": {
     "MT4_01": {
       "ExePath": "D:\\MT4\\MT4_01\\terminal.exe",

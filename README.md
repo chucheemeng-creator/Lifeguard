@@ -18,7 +18,7 @@ Lifeguard 是 MetaTrader 4 (MT4) 與 HaNodeClient 的看門狗。它在 Windows 
 - **HaNodeClient 監控**(可選):同樣以心跳判斷,逾時就重啟。
 - **Telegram 通知**:告警、停擺期間每小時提醒、恢復通知。
 - **保護機制**:連續重啟 3 次仍失敗,或 30 分鐘內重啟 5 次(Crash Loop),就暫停自動重啟並告警。
-- **啟動前關閉 AutoTrade**(可選):重啟 MT4 前先把 AutoTrade 關掉,適合由 HaNodeClient 決定何時開啟交易的 HA 節點。
+- **啟動前關閉 AutoTrade**:重啟 MT4 前先把 AutoTrade 關掉,交給 HaNodeClient 決定何時開啟交易。有設定 HaNodeClient 的 HA 節點預設開啟,避免 Slave 重啟後在 HaNodeClient 關掉 AutoTrade 前短暫雙邊下單。
 - **設定熱重載**:修改 `config.json` 後自動生效,不必重開。
 
 ### 系統需求
@@ -52,7 +52,7 @@ Lifeguard 是 MetaTrader 4 (MT4) 與 HaNodeClient 的看門狗。它在 Windows 
 | `RestartFlapWindowMs` | `1800000` | Crash Loop 的偵測視窗(30 分鐘) |
 | `RestartFlapMaxCount` | `5` | 視窗內重啟達到這個次數就暫停重啟 |
 | `AlertReminderIntervalMs` | `3600000` | 停擺期間的提醒間隔(1 小時) |
-| `ForceAutoTradeOffOnStart` | `false` | 重啟 MT4 前先關閉 AutoTrade |
+| `ForceAutoTradeOffOnStart` | 有設定 `HaNodeClient.ExePath` 時 `true`,否則 `false` | 重啟 MT4 前先關閉 AutoTrade。HA 節點請保持開啟 |
 | `NotifyOnRecovery` | `true` | 恢復時發 Telegram 通知 |
 
 `.env` 的設定優先於 `config.json`,而且不支援熱重載,修改後要重新啟動 Lifeguard。**不要把 `.env` 和 `config.json` 提交到 Git。**
@@ -95,7 +95,7 @@ Lifeguard is a watchdog for MetaTrader 4 (MT4) and HaNodeClient. It runs on Wind
 - **HaNodeClient monitoring** (optional): the same heartbeat check, with its own timeout.
 - **Telegram alerts**: an alert on failure, an hourly reminder while down, and a recovery notice.
 - **Safeguards**: after 3 failed restarts in a row, or 5 restarts within 30 minutes (crash loop), automatic restarts are suspended and you are alerted.
-- **AutoTrade off before start** (optional): turns AutoTrade off before MT4 is restarted. Useful on HA nodes where HaNodeClient decides when trading is enabled.
+- **AutoTrade off before start**: turns AutoTrade off before MT4 is restarted, so HaNodeClient decides when trading is enabled. On by default for HA nodes (when HaNodeClient is configured), so a restarted Slave cannot trade briefly before HaNodeClient turns AutoTrade off.
 - **Live configuration**: changes to `config.json` take effect without a restart.
 
 ### Requirements
@@ -129,7 +129,7 @@ Lifeguard is a watchdog for MetaTrader 4 (MT4) and HaNodeClient. It runs on Wind
 | `RestartFlapWindowMs` | `1800000` | Crash-loop detection window (30 minutes) |
 | `RestartFlapMaxCount` | `5` | Restarts within the window before restarts are suspended |
 | `AlertReminderIntervalMs` | `3600000` | Reminder interval while down (1 hour) |
-| `ForceAutoTradeOffOnStart` | `false` | Turn AutoTrade off before restarting MT4 |
+| `ForceAutoTradeOffOnStart` | `true` if `HaNodeClient.ExePath` is set, otherwise `false` | Turn AutoTrade off before restarting MT4. Keep it on for HA nodes |
 | `NotifyOnRecovery` | `true` | Send a Telegram message on recovery |
 
 Values in `.env` override `config.json`. `.env` is not reloaded live; restart Lifeguard after changing it. **Never commit `.env` or `config.json` to Git.**
